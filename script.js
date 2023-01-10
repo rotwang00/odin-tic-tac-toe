@@ -86,6 +86,19 @@ const checkForGameOver = function (gameState) {
     [0, 4, 8],
     [2, 4, 6],
   ];
+  const player = gameState.turn;
+  for (let condition of winningConditions) {
+    if (
+      gameState.board[condition[0]] === player &&
+      gameState.board[condition[1]] === player &&
+      gameState.board[condition[2]] === player
+    ) {
+      alert(`Player ${player} has won!`);
+    }
+  }
+  if (gameState.board.includes(0) === false) {
+    alert("It's a draw!");
+  }
 };
 
 initialize();

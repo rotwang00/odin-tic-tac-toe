@@ -94,6 +94,7 @@ const checkForGameOver = function (gameState) {
       gameState.board[condition[2]] === player
     ) {
       alert(`Player ${player} has won!`);
+      return;
     }
   }
   if (gameState.board.includes(0) === false) {
